@@ -4,6 +4,7 @@
   "description": "The evaluated-exercise 9 of continuous integration",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "build": "dotenv -e .env -- tsc -p tsconfig.json",
     "start": "dotenv -e .env -- node ./dist/index.js",
     "migrate": "dotenv -e .env -- npx prisma migrate deploy",
@@ -26,10 +27,13 @@
     "fastify": "^5.2.1"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
+    "jest": "^30.4.2",
     "nodemon": "^3.1.9",
     "prisma": "^6.4.0",
+    "ts-jest": "^29.4.11",
     "typescript": "^5.7.3"
   }
 }
