@@ -25,8 +25,8 @@ describe('GET /ping', () => {
     });
 
     expect(response.statusCode).toBe(200);
-    expect(JSON.parse(response.body)).toEqual({ count: 999 }); // intentional failure for CI screenshot
-  });
+    expect(JSON.parse(response.body)).toEqual({ count: 3 });
+    });
 
   it('should return 500 if the database throws an error', async () => {
     (mockPrisma.counter.create as jest.Mock).mockRejectedValue(
